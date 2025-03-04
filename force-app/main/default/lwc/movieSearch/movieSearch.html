@@ -1,0 +1,50 @@
+    <template>
+
+    <lightning-layout horizontal-align="center" class="frontline">
+    <lightning-layout-item padding="around-small" size="3">
+    <lightning-combobox
+        name="status"
+        label="Status"
+        placeholder="Choose Type"
+        value={valueOfStatus}
+        onchange={eventHandler}
+        options={picklistOptions}>
+    </lightning-combobox>
+    </lightning-layout-item>
+    <lightning-layout-item padding="around-small" size="7">
+        <lightning-input
+        name="search"
+        label="Search for Movie"
+        type="search"
+        is-loading={loading}
+        onchange={eventHandler}
+    ></lightning-input>
+
+    </lightning-layout-item>
+    <lightning-layout-item padding="around-small" size="2">
+        <lightning-input type="number" 
+        name="input1" 
+        label="Page" 
+        onchange={eventHandler} 
+        min="1" 
+        max="100" 
+        field-level-help="Range 1-100" 
+        value={selectedPageNumber}
+        ></lightning-input>
+    </lightning-layout-item>
+
+    </lightning-layout>
+
+    <!-- //Display section multiple rows = true--> 
+     <lightning-layout horizontal-align="center">
+        <template for:each={dataRecieved} for:item='item'>
+            <lightning-layout-item  size="3" 
+                                    padding="around_small" 
+                                    key = {item.imdbID}>
+
+            </lightning-layout-item>
+        </template>
+
+
+     </lightning-layout>
+    </template>
