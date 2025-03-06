@@ -1,6 +1,6 @@
     <template>
-
-    <lightning-layout horizontal-align="center" class="frontline">
+    <div class="frontline">
+    <lightning-layout horizontal-align="center" >
     <lightning-layout-item padding="around-small" size="3">
     <lightning-combobox
         name="status"
@@ -34,17 +34,24 @@
     </lightning-layout-item>
 
     </lightning-layout>
-
+    
+</div>
+<template if:true={showTileDisplaySection}>
     <!-- //Display section multiple rows = true--> 
-     <lightning-layout horizontal-align="center">
-        <template for:each={dataRecieved} for:item='item'>
+     <div class="slds-var-m-top_large slds-scrollable_y scrollable">
+     <lightning-layout horizontal-align="center" multiple-rows="true">
+        <template for:each={dataRecieved} for:item='search'>
             <lightning-layout-item  size="3" 
                                     padding="around_small" 
-                                    key = {item.imdbID}>
+                                    key={search.imdbID}>
 
+                                    This is What you are looking for!!
+
+           <c-movie-tile movie={search} show-tile={showTileDisplaySection}></c-movie-tile> 
             </lightning-layout-item>
+           
         </template>
-
-
      </lightning-layout>
+    </div>
+</template>
     </template>

@@ -1,0 +1,28 @@
+.outerTile {
+    background-color: rgb(238, 162, 162);
+    cursor: progress;
+    /* cursor: pointer; */
+    display: block;
+}
+
+.midTile{
+    
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+}
+
+/* .MovieTitle{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px 8px;
+    text-align: justify;
+    background-color: rgb(245, 232, 232);
+    color: rgb(78, 26, 26);
+} */
+
