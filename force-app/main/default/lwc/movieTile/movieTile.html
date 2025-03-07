@@ -1,12 +1,11 @@
 <template>
     <template  if:true={showTile}>
-    <div class ='outerTile' onclick={onclickHandler}>
+    <div class ={getSeletedTile} onclick={onclickHandler}>
         <div class='midTile'>
           <img src={movie.Poster} />
             <!-- {movie.imdbID} -->
              <div class="MovieTitle">
                 <h1>{movie.Title}</h1>
-                 <!-- {movie.Title} -->
              </div>
         </div>
         

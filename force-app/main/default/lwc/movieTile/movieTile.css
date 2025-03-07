@@ -1,28 +1,34 @@
 .outerTile {
-    background-color: rgb(238, 162, 162);
+    background-color: rgb(221, 238, 217);
     cursor: progress;
     /* cursor: pointer; */
-    display: block;
+    display: box;
+    object-fit: contain;
 }
 
 .midTile{
-    
-    background-size: cover;
+    object-position: center;
+    /* background-size: cover; */
     background-position: center;
-    position: relative;
-    height: 100%;
+    position: static;
+    background-repeat: no-repeat;
     width: 100%;
+    height: 100%;   
 
 }
-
-/* .MovieTitle{
-    position: absolute;
+.MovieTitle{
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 8px 8px;
-    text-align: justify;
-    background-color: rgb(245, 232, 232);
-    color: rgb(78, 26, 26);
-} */
+    padding: 6px 8px;
+    text-align: center;
+    background-color:  rgb(221, 238, 217);
+    /* color: rgb(18, 2, 2); */
+}
 
+
+.selectedTile{
+    border: 5px solid black;
+    
+}

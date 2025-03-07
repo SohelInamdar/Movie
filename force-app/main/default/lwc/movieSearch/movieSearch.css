@@ -1,11 +1,11 @@
 .frontline {
     border: 2px solid;
-    border-color: black;
-    background-color: antiquewhite;
+    /* border-color: black; */
+    background-color: rgb(218, 233, 210);
 }
 
 .scrollable{
     height: 600px;
-    background-color: rgb(183, 232, 212);
+    background-color: rgb(221, 241, 241);
    
 }

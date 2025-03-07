@@ -38,16 +38,17 @@
 </div>
 <template if:true={showTileDisplaySection}>
     <!-- //Display section multiple rows = true--> 
-     <div class="slds-var-m-top_large slds-scrollable_y scrollable">
+     <div class="slds-var-m-top_large slds-scrollable_y scrollable sldx-box">
      <lightning-layout horizontal-align="center" multiple-rows="true">
         <template for:each={dataRecieved} for:item='search'>
             <lightning-layout-item  size="3" 
                                     padding="around_small" 
                                     key={search.imdbID}>
-
-                                    This is What you are looking for!!
-
-           <c-movie-tile movie={search} show-tile={showTileDisplaySection}></c-movie-tile> 
+           <c-movie-tile movie={search} 
+                         show-tile={showTileDisplaySection}
+                         selected-movie-id={selectedMovie}
+                         onsend={selectedMovieHandler}
+                         ></c-movie-tile> 
             </lightning-layout-item>
            
         </template>
